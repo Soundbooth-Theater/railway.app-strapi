@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "singularName": "group",
+    "pluralName": "groups",
+    "displayName": "Group"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Display_Options": {
+      "type": "component",
+      "component": "shared.display-options",
+      "repeatable": false
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Display_Buy_All": {
+      "type": "boolean"
+    },
+    "Buy_All_Price": {
+      "type": "decimal",
+      "min": 0,
+      "max": 200000
+    },
+    "Information": {
+      "type": "component",
+      "component": "shared.informations",
+      "repeatable": false
+    },
+    "Group_Status": {
+      "type": "component",
+      "component": "shared.status",
+      "repeatable": false
+    },
+    "series": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::series.series"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::item.item",
+      "inversedBy": "groups"
+    }
+  }
+}

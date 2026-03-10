@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "casts",
+  "info": {
+    "singularName": "cast",
+    "pluralName": "casts",
+    "displayName": "Cast"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Cast": {
+      "type": "component",
+      "component": "shared.cast",
+      "repeatable": true
+    }
+  }
+}

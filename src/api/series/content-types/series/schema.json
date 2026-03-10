@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seriess",
+  "info": {
+    "singularName": "series",
+    "pluralName": "seriess",
+    "displayName": "Series"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Display_Options": {
+      "type": "component",
+      "component": "shared.display-options",
+      "repeatable": false
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Primary_Color": {
+      "type": "integer"
+    },
+    "Sample_URL": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "Informations": {
+      "type": "component",
+      "component": "shared.informations",
+      "repeatable": false
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::item.item"
+    },
+    "cast": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cast.cast"
+    },
+    "genre": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::genre.genre"
+    },
+    "Series_Status": {
+      "type": "component",
+      "component": "shared.status",
+      "repeatable": false
+    },
+    "Parental_Control": {
+      "type": "component",
+      "component": "shared.parental-control",
+      "repeatable": false
+    }
+  }
+}

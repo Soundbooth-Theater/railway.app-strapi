@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Display_Options": {
+      "type": "component",
+      "component": "shared.display-options",
+      "repeatable": false
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Primary_color": {
+      "type": "integer"
+    },
+    "Sample_URL": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "Store": {
+      "type": "component",
+      "component": "shared.store",
+      "repeatable": false
+    },
+    "Imprints": {
+      "type": "component",
+      "component": "shared.imprints",
+      "repeatable": true
+    },
+    "casts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cast.cast"
+    },
+    "genres": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::genre.genre"
+    },
+    "Item_Status": {
+      "type": "component",
+      "component": "shared.status",
+      "repeatable": false
+    },
+    "Visibilities": {
+      "type": "component",
+      "component": "shared.visibilities",
+      "repeatable": false
+    },
+    "series": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::series.series"
+    },
+    "groups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::group.group",
+      "mappedBy": "items"
+    }
+  }
+}
