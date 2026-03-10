@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_genres",
+  "info": {
+    "displayName": "Genre",
+    "icon": "priceTag"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": false
+    },
+    "Show_In_Home": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

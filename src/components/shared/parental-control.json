@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_parental_controls",
+  "info": {
+    "displayName": "Parental Control",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Content_Rating_Reviewed": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_visibilities",
+  "info": {
+    "displayName": "Visibilities",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Visibilities": {
+      "type": "enumeration",
+      "enum": [
+        "Show On App",
+        "Sbt Direct",
+        "Disable Purchases",
+        "Audible Only"
+      ]
+    }
+  },
+  "config": {}
+}

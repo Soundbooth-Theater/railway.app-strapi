@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_formats",
+  "info": {
+    "displayName": "Format",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Format": {
+      "type": "enumeration",
+      "default": "Audiobook",
+      "enum": [
+        "Bonus",
+        "Cinematic",
+        "Immersion",
+        "Classic",
+        "Audiobook"
+      ]
+    }
+  },
+  "config": {}
+}

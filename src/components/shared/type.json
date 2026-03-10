@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_types",
+  "info": {
+    "displayName": "Type",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Book",
+        "Audio File",
+        "Movie",
+        "Image"
+      ]
+    }
+  },
+  "config": {}
+}

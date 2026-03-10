@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_informations",
+  "info": {
+    "displayName": "Informations",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "component",
+      "component": "shared.type",
+      "repeatable": false
+    },
+    "Genre": {
+      "type": "component",
+      "component": "shared.genre",
+      "repeatable": true
+    },
+    "Format": {
+      "type": "component",
+      "component": "shared.format",
+      "repeatable": false
+    },
+    "Imprints": {
+      "type": "component",
+      "component": "shared.imprints",
+      "repeatable": true
+    },
+    "Visibilites": {
+      "type": "component",
+      "component": "shared.visibilities",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

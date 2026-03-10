@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_statuses",
+  "info": {
+    "displayName": "Status",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "Item_Status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Draft",
+      "enum": [
+        "Draft",
+        "Published",
+        "Scheduled"
+      ]
+    },
+    "Platform_Release_Date": {
+      "type": "datetime",
+      "required": true
+    },
+    "Display_Release_Date_On_Preorder": {
+      "type": "boolean"
+    },
+    "Preorder_Date": {
+      "type": "datetime"
+    },
+    "Original_Release_Date": {
+      "type": "datetime"
+    },
+    "Archived": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

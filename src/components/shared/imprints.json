@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_imprints",
+  "info": {
+    "displayName": "Imprints",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Imprints": {
+      "type": "enumeration",
+      "enum": [
+        "Soundbooth",
+        "Soundbooth Theater Burlesque",
+        "Soundbooth Theater Original",
+        "Aethon Audio"
+      ]
+    }
+  },
+  "config": {}
+}

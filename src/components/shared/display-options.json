@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_shared_display_options",
+  "info": {
+    "displayName": "Display Options",
+    "icon": "television"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Featured_Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Hero_Carousel_Artwork": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Index": {
+      "type": "integer",
+      "required": true
+    },
+    "Display_Index": {
+      "type": "decimal"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_stores",
+  "info": {
+    "displayName": "Store",
+    "icon": "feather"
+  },
+  "options": {},
+  "attributes": {
+    "Free": {
+      "type": "boolean"
+    },
+    "Price": {
+      "type": "decimal",
+      "min": 0,
+      "max": 2000
+    }
+  },
+  "config": {}
+}

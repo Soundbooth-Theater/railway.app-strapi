@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_roles",
+  "info": {
+    "displayName": "Role",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "Role": {
+      "type": "enumeration",
+      "enum": [
+        "Author",
+        "Featuring",
+        "Narrator",
+        "Sound Design",
+        "Music"
+      ]
+    }
+  },
+  "config": {}
+}

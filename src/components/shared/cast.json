@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_casts",
+  "info": {
+    "displayName": "Cast",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "Team_Member": {
+      "type": "component",
+      "component": "shared.team-member",
+      "repeatable": true
+    },
+    "Role": {
+      "type": "component",
+      "component": "shared.role",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

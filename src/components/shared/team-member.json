@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_team_members",
+  "info": {
+    "displayName": "Team Member",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    }
+  },
+  "config": {}
+}
