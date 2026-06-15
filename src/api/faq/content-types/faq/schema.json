@@ -4,7 +4,8 @@
   "info": {
     "singularName": "faq",
     "pluralName": "faqs",
-    "displayName": "Faq"
+    "displayName": "Faq",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,10 +13,11 @@
   "pluginOptions": {},
   "attributes": {
     "Question": {
-      "type": "string"
+      "type": "richtext",
+      "required": true
     },
     "Answer": {
-      "type": "string"
+      "type": "richtext"
     }
   }
 }
