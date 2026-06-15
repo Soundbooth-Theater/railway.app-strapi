@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "publishes",
+  "info": {
+    "singularName": "publish",
+    "pluralName": "publishes",
+    "displayName": "Publish"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  }
+}
