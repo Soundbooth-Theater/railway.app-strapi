@@ -527,27 +527,29 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   }
 }
 
-export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
-  collectionName: 'faqs'
+export interface ApiFaqPageFaqFaqPageFaq extends Struct.SingleTypeSchema {
+  collectionName: 'faq_page_faqs'
   info: {
     description: ''
-    displayName: 'Front page Faq'
-    pluralName: 'faqs'
-    singularName: 'faq'
+    displayName: 'Faq page Faq'
+    pluralName: 'faq-page-faqs'
+    singularName: 'faq-page-faq'
   }
   options: {
     draftAndPublish: true
   }
   attributes: {
-    Answer: Schema.Attribute.RichText
     createdAt: Schema.Attribute.DateTime
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private
+    DynamicZone: Schema.Attribute.DynamicZone<['shared.header', 'shared.faq']>
     locale: Schema.Attribute.String & Schema.Attribute.Private
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'> &
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::faq-page-faq.faq-page-faq'
+    > &
       Schema.Attribute.Private
     publishedAt: Schema.Attribute.DateTime
-    Question: Schema.Attribute.RichText & Schema.Attribute.Required
     updatedAt: Schema.Attribute.DateTime
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private
@@ -1299,7 +1301,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor
       'api::cast.cast': ApiCastCast
       'api::category.category': ApiCategoryCategory
-      'api::faq.faq': ApiFaqFaq
+      'api::faq-page-faq.faq-page-faq': ApiFaqPageFaqFaqPageFaq
       'api::genre.genre': ApiGenreGenre
       'api::global.global': ApiGlobalGlobal
       'api::group.group': ApiGroupGroup

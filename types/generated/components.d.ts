@@ -27,6 +27,18 @@ export interface SharedDisplayOptions extends Struct.ComponentSchema {
   }
 }
 
+export interface SharedFaq extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faqs'
+  info: {
+    displayName: 'FAQ'
+    icon: 'apps'
+  }
+  attributes: {
+    Answer: Schema.Attribute.RichText
+    Question: Schema.Attribute.RichText
+  }
+}
+
 export interface SharedFormat extends Struct.ComponentSchema {
   collectionName: 'components_shared_formats'
   info: {
@@ -51,6 +63,17 @@ export interface SharedGenre extends Struct.ComponentSchema {
     Description: Schema.Attribute.Text
     Name: Schema.Attribute.String & Schema.Attribute.Required
     Show_In_Home: Schema.Attribute.Boolean
+  }
+}
+
+export interface SharedHeader extends Struct.ComponentSchema {
+  collectionName: 'components_shared_headers'
+  info: {
+    displayName: 'Header'
+    icon: 'alien'
+  }
+  attributes: {
+    Header: Schema.Attribute.RichText
   }
 }
 
@@ -256,8 +279,10 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.cast': SharedCast
       'shared.display-options': SharedDisplayOptions
+      'shared.faq': SharedFaq
       'shared.format': SharedFormat
       'shared.genre': SharedGenre
+      'shared.header': SharedHeader
       'shared.imprints': SharedImprints
       'shared.informations': SharedInformations
       'shared.media': SharedMedia

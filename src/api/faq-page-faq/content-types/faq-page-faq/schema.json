@@ -1,23 +1,22 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "faq_page_faqs",
   "info": {
     "singularName": "faq-page-faq",
     "pluralName": "faq-page-faqs",
-    "displayName": "Faq page Faq"
+    "displayName": "Faq page Faq",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Question": {
-      "type": "richtext"
-    },
-    "Answer": {
-      "type": "richtext"
-    },
-    "HeaderDivider": {
-      "type": "richtext"
+    "DynamicZone": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.header",
+        "shared.faq"
+      ]
     }
   }
 }
