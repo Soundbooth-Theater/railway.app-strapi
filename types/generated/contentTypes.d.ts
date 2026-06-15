@@ -556,6 +556,34 @@ export interface ApiFaqPageFaqFaqPageFaq extends Struct.SingleTypeSchema {
   }
 }
 
+export interface ApiFrontPageFaqFrontPageFaq extends Struct.SingleTypeSchema {
+  collectionName: 'front_page_faqs'
+  info: {
+    displayName: 'Front page Faq'
+    pluralName: 'front-page-faqs'
+    singularName: 'front-page-faq'
+  }
+  options: {
+    draftAndPublish: true
+  }
+  attributes: {
+    createdAt: Schema.Attribute.DateTime
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private
+    Dynamic: Schema.Attribute.DynamicZone<['shared.faq']>
+    locale: Schema.Attribute.String & Schema.Attribute.Private
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::front-page-faq.front-page-faq'
+    > &
+      Schema.Attribute.Private
+    publishedAt: Schema.Attribute.DateTime
+    updatedAt: Schema.Attribute.DateTime
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private
+  }
+}
+
 export interface ApiGenreGenre extends Struct.CollectionTypeSchema {
   collectionName: 'genres'
   info: {
@@ -1302,6 +1330,7 @@ declare module '@strapi/strapi' {
       'api::cast.cast': ApiCastCast
       'api::category.category': ApiCategoryCategory
       'api::faq-page-faq.faq-page-faq': ApiFaqPageFaqFaqPageFaq
+      'api::front-page-faq.front-page-faq': ApiFrontPageFaqFrontPageFaq
       'api::genre.genre': ApiGenreGenre
       'api::global.global': ApiGlobalGlobal
       'api::group.group': ApiGroupGroup

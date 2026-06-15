@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "front_page_faqs",
+  "info": {
+    "singularName": "front-page-faq",
+    "pluralName": "front-page-faqs",
+    "displayName": "Front page Faq"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Dynamic": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.faq"
+      ]
+    }
+  }
+}
