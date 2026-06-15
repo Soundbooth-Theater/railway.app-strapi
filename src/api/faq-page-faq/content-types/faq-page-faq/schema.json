@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faq_page_faqs",
+  "info": {
+    "singularName": "faq-page-faq",
+    "pluralName": "faq-page-faqs",
+    "displayName": "Faq page Faq"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Question": {
+      "type": "richtext"
+    },
+    "Answer": {
+      "type": "richtext"
+    },
+    "HeaderDivider": {
+      "type": "richtext"
+    }
+  }
+}
