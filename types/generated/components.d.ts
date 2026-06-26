@@ -30,12 +30,25 @@ export interface SharedDisplayOptions extends Struct.ComponentSchema {
 export interface SharedFaq extends Struct.ComponentSchema {
   collectionName: 'components_shared_faqs'
   info: {
+    description: ''
     displayName: 'FAQ'
     icon: 'apps'
   }
   attributes: {
-    Answer: Schema.Attribute.RichText
-    Question: Schema.Attribute.RichText
+    Answer: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml'
+        }
+      >
+    Question: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml'
+        }
+      >
   }
 }
 

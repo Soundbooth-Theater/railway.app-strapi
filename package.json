@@ -11,6 +11,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^7.1.1",
     "@strapi/plugin-cloud": "5.11.3",
     "@strapi/plugin-users-permissions": "5.11.3",
     "@strapi/provider-upload-cloudinary": "5.11.3",
@@ -33,5 +34,8 @@
   },
   "strapi": {
     "uuid": "fbaf61cd-dcdc-45ae-bf43-8781f5861c55"
-  }
+  },
+  "resolutions": {
+		"@types/minimatch": "5.1.2"
+	}
 }

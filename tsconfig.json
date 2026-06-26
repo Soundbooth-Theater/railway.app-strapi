@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node"],
     "module": "CommonJS",
     "moduleResolution": "Node",
     "lib": ["ES2020"],
@@ -39,5 +40,5 @@
     "**/*.test.*",
     // Do not include plugins in the server compilation
     "src/plugins/**"
-  ]
+  ],
 }

@@ -2,15 +2,24 @@
   "collectionName": "components_shared_faqs",
   "info": {
     "displayName": "FAQ",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Question": {
-      "type": "richtext"
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     },
     "Answer": {
-      "type": "richtext"
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
