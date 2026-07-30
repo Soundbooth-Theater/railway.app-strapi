@@ -4,14 +4,19 @@
   "info": {
     "singularName": "publish",
     "pluralName": "publishes",
-    "displayName": "Publish"
+    "displayName": "Publish",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "text": {
-      "type": "richtext"
+    "html": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

@@ -82,11 +82,18 @@ export interface SharedGenre extends Struct.ComponentSchema {
 export interface SharedHeader extends Struct.ComponentSchema {
   collectionName: 'components_shared_headers'
   info: {
+    description: ''
     displayName: 'Header'
     icon: 'alien'
   }
   attributes: {
-    Header: Schema.Attribute.RichText
+    html: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml'
+        }
+      >
   }
 }
 

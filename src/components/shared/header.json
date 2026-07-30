@@ -2,12 +2,17 @@
   "collectionName": "components_shared_headers",
   "info": {
     "displayName": "Header",
-    "icon": "alien"
+    "icon": "alien",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Header": {
-      "type": "richtext"
+    "html": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

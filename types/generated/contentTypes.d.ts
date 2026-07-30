@@ -725,6 +725,7 @@ export interface ApiItemItem extends Struct.CollectionTypeSchema {
 export interface ApiPublishPublish extends Struct.SingleTypeSchema {
   collectionName: 'publishes'
   info: {
+    description: ''
     displayName: 'Publish'
     pluralName: 'publishes'
     singularName: 'publish'
@@ -736,6 +737,13 @@ export interface ApiPublishPublish extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private
+    html: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml'
+        }
+      >
     locale: Schema.Attribute.String & Schema.Attribute.Private
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -743,7 +751,6 @@ export interface ApiPublishPublish extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private
     publishedAt: Schema.Attribute.DateTime
-    text: Schema.Attribute.RichText
     updatedAt: Schema.Attribute.DateTime
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private
