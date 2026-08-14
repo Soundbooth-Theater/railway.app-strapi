@@ -6,11 +6,17 @@ const FONT_STYLESHEETS = [
     'https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap',
 ];
 
+// With `supportAllValues: true`, CKEditor writes each option's `model` verbatim as
+// `font-family:<model>`. The object form makes the Clash entry emit `font-family:var(--font-clash)`
+// in the source instead of the literal font stack.
+const CLASH_FONT_OPTION = { title: 'Clash Display', model: 'var(--font-clash)' };
+const KARLA_FONT_OPTION = { title: 'Karla', model: 'var(--font-karla)' };
+
 // CKEditor drops its built-in list when `options` is set, so the stock fonts are repeated here.
 const FONT_FAMILY_OPTIONS = [
     'default',
-    'Clash Display, sans-serif',
-    'Karla, sans-serif',
+    CLASH_FONT_OPTION,
+    KARLA_FONT_OPTION,
     'Arial, Helvetica, sans-serif',
     'Courier New, Courier, monospace',
     'Georgia, serif',
@@ -62,6 +68,15 @@ export default {
                     --ck-content-font-family: Karla, sans-serif;
                     /* Declared at :root against the root value, so it needs setting again here. */
                     --ck-content-list-marker-font-family: Karla, sans-serif;
+                }
+            `,
+            // The Clash/Karla options emit font-family:var(--font-clash|--font-karla); define the
+            // tokens so the editor content and font dropdown preview render inside the admin.
+            css`
+                :root,
+                .ck-content {
+                    --font-clash: 'Clash Display', sans-serif;
+                    --font-karla: Karla, sans-serif;
                 }
             `,
             // CKEditor caps neither the panel nor the list, so a long font list grows until it flips upward.
